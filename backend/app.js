@@ -12,6 +12,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user-route');
 const bookRoutes = require('./routes/book');
 const favouriteRoutes = require('./routes/favourite');
+const cartRoutes = require('./routes/cart');
 
 
 app.get('/', (req, res) => {
@@ -22,7 +23,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/book', bookRoutes);
 app.use('/api/favourite', favouriteRoutes);
-
+app.use('/api/cart', cartRoutes);
 // Connect to MongoDB
 connectDB();
 
