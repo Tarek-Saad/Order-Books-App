@@ -1,0 +1,33 @@
+### Register request
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Tarek",
+  "email": "tareksaad1010101@gmail.com",
+  "password": "tarek@123",
+  "role": "admin",
+  "phone": "01557994946"
+}
+
+### Login request
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+# @name login
+
+{
+  "email": "tareksaad1010101@gmail.com",
+  "password": "tarek@123"
+}
+
+### Store the token from the login response
+@token = {{login.response.body.token}}
+
+
+
+### Use the token for the users request
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWFlYjdjNTIxYzUwZGE2YzZmMzQyZCIsImlhdCI6MTcyOTgxNzUyMSwiZXhwIjoxNzI5ODIxMTIxfQ.n7JRNNrLd7y4aOjB7BqxHJYBN9Kd-qHMvC5vn7NGVy0
+
+
+

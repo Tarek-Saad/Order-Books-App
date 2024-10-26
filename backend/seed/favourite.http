@@ -1,0 +1,10 @@
+PUT http://localhost:3000/api/favourite
+Content-Type: application/json
+bookid: 671c401289a6ff3b3b8933d4
+id: 67193dca1e1366c92fb3da68
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWMzZmY4ODlhNmZmM2IzYjg5MzNjZiIsImlhdCI6MTcyOTk3Njc3MCwiZXhwIjoxNzI5OTgwMzcwfQ.3MSTbdZDTWk-cNsCiinZnt080jYLNvwEi1T-XDfBMBM
+
+### Get favourite books
+GET http://localhost:3000/api/favourite
+id: 67193dca1e1366c92fb3da68
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWMzZmY4ODlhNmZmM2IzYjg5MzNjZiIsImlhdCI6MTcyOTk3Njc3MCwiZXhwIjoxNzI5OTgwMzcwfQ.3MSTbdZDTWk-cNsCiinZnt080jYLNvwEi1T-XDfBMBM

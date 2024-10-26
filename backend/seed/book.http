@@ -1,0 +1,40 @@
+POST http://localhost:3000/api/book
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWFlYjdjNTIxYzUwZGE2YzZmMzQyZCIsImlhdCI6MTcyOTkwMjg1NSwiZXhwIjoxNzI5OTA2NDU1fQ.SW8iFBM5FeAnmxquML-OZ-0FzHztEMCtLwmLFqecZO0
+id: 671c3ff889a6ff3b3b8933cf
+
+{
+    "title": "Book 1",
+    "author": "Author 1",
+    "description": "Description 1",
+    "pageCount": 100,
+    "pricePerPage": 1,
+    "coverPrice": 1,
+    "framePrice": 1,
+    "totalPrice": 1,
+    "coverImage": "coverImage.jpg",
+    "pageImages": ["page1.jpg", "page2.jpg", "page3.jpg"],
+    "category": "Arabic",
+    "mockupAnimation": "mockupAnimation.mp4"
+}
+
+### Get all books
+GET http://localhost:3000/api/book
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWFlYjdjNTIxYzUwZGE2YzZmMzQyZCIsImlhdCI6MTcyOTkwMjg1NSwiZXhwIjoxNzI5OTA2NDU1fQ.SW8iFBM5FeAnmxquML-OZ-0FzHztEMCtLwmLFqecZO0
+id: 671aeb7c521c50da6c6f342d
+
+### Get book by id
+GET http://localhost:3000/api/book/671c401289a6ff3b3b8933d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWFlYjdjNTIxYzUwZGE2YzZmMzQyZCIsImlhdCI6MTcyOTkwMjg1NSwiZXhwIjoxNzI5OTA2NDU1fQ.SW8iFBM5FeAnmxquML-OZ-0FzHztEMCtLwmLFqecZO0
+id: 671aeb7c521c50da6c6f342d
+
+### Update book
+PUT http://localhost:3000/api/book/671c401289a6ff3b3b8933d4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWFlYjdjNTIxYzUwZGE2YzZmMzQyZCIsImlhdCI6MTcyOTkwMjg1NSwiZXhwIjoxNzI5OTA2NDU1fQ.SW8iFBM5FeAnmxquML-OZ-0FzHztEMCtLwmLFqecZO0
+id: 671c3ff889a6ff3b3b8933cf
+
+{
+    "title": "Book 1 Updated",
+    "author": "Author 1 Updated"
+}
+

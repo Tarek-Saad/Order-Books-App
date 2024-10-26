@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{ "name": "adminsdf", "email": "admin123@gmail.com", "password": "admin@123", "role": "admin", "phone": "0123456789" }
+
+
+
