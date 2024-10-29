@@ -3,6 +3,17 @@ import React from 'react';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
+  const links = [
+    { label: 'صمم مذكراتك', href: '#' },
+    { label: '🔥 عروض اليوم 🔥', href: '#' },
+    { label: 'تسجيل الدخول', href: '#' },
+    { label: 'إنشاء حساب', href: '#' },
+    { label: 'كل المذكرات', href: '#' },
+    { label: 'المذكرات المفضلة', href: '#' },
+    { label: 'سلة الشراء', href: '#' },
+    { label: 'صفحتك الشخصية', href: '#' },
+  ];
+
   return (
     <nav className="w-full bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,7 +22,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 ml-5">
             <h1 className="text-xl sm:text-2xl font-extrabold text-[#5f000c] drop-shadow-[0_2px_8px_rgba(255,215,255,0.6)]">
-              صمم مذكراتك
+              {links[0].label}
             </h1>
           </div>
 
@@ -33,15 +44,15 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-5">
             <button className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium group relative overflow-hidden">
               <span className="inline-flex items-center animate-pulse">
-              🔥 عروض اليوم 🔥
+              {links[1].label}
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-red-400 to-yellow-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </button>
             <button className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium">
-              تسجيل الدخول
+              {links[2].label}
             </button>
             <button className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg border-2 border-yellow-orange transition-colors readex-pro-medium">
-              إنشاء حساب
+              {links[3].label}
             </button>
           </div>
 
@@ -89,23 +100,23 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex justify-center mb-6">
           <h1 className="text-xl sm:text-2xl font-extrabold text-[#5f000c] drop-shadow-[0_2px_8px_rgba(255,215,255,0.6)]">
-              صمم مذكراتك
+              {links[0].label}
             </h1>
           </div>
 
           {/* Navigation Links */}
           <button className="px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium group relative overflow-hidden cursor-pointer">
             <span className="inline-flex items-center animate-pulse relative z-10">
-              عروض اليوم 🔥
+              {links[1].label}
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-red-500 to-yellow-300 opacity-0 group-hover:opacity-30 transition-all duration-500 animate-gradient-x"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
           <button className="w-full px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium text-right">
-            تسجيل الدخول
+            {links[2].label}
           </button>
           <button className="w-full px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg border-2 border-yellow-orange transition-colors readex-pro-medium text-right">
-            إنشاء حساب
+            {links[3].label}
           </button>
         </div>
       </div>
