@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="h-[345px] w-full bg-dark-charcoal">
+    <div className="h-[345px] w-full bg-dark-charcoal z-10">
       {/* First Row - Navigation Links */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-wrap justify-center gap-8 text-white readex-pro-medium">

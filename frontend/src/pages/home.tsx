@@ -1,7 +1,9 @@
+import Hero from "../components/Home/Hero";
+
 const Home = () => {
   return (
-    <div>
-      <div className="h-[100vh] w-full bg-white"></div>
+    <div className="h-[calc(100vh-130px)] w-full bg-white max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Hero />
     </div>
   )
 }
