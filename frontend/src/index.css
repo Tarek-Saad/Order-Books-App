@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background-color: #f0aaac;
+    direction: rtl;
+    font-family: "Readex Pro", sans-serif;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Reset default text direction for specific elements if needed */
+
+input,
+textarea {
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* Handle bidirectional text */
+
+[dir="rtl"] {
+    unicode-bidi: bidi-override;
+}

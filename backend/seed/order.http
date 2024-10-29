@@ -1,9 +1,20 @@
+### Create a new order
 POST http://localhost:3000/api/order
+Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWMzZmY4ODlhNmZmM2IzYjg5MzNjZiIsImlhdCI6MTcyOTk4NTcwMywiZXhwIjoxNzI5OTg5MzAzfQ.RFHCnkgRve2oGgvRJqd9zsCoyYmblutaBU8ZAa3xdMI
-id: 67193dca1e1366c92fb3da68
+id: 671c3ff889a6ff3b3b8933cf
 
 {
     "order": [
-        { "_id": "671c401289a6ff3b3b8933d4", "price": 100 }
+        {
+            "_id": "671c401289a6ff3b3b8933d4",
+            "price": 100
+        }
     ]
 }
+
+### Get orders history of particular user
+GET http://localhost:3000/api/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWMzZmY4ODlhNmZmM2IzYjg5MzNjZiIsImlhdCI6MTcyOTk4NTcwMywiZXhwIjoxNzI5OTg5MzAzfQ.RFHCnkgRve2oGgvRJqd9zsCoyYmblutaBU8ZAa3xdMI
+id: 671c3ff889a6ff3b3b8933cf
+
