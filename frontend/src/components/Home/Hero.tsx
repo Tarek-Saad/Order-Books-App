@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   const texts = [
     {type : "hook",text : "صمم مذكرتك بالشكل الى فى دماغك بالظبط"},
@@ -14,8 +16,9 @@ const Hero = () => {
         {texts[0].text}
       </h1>
       <p className="text-lg md:text-xl mt-4 lg:mt-5 text-golden-orange drop-shadow-[0_2px_8px_rgba(0,0,0,0.1)]">{texts[1].text}</p>
-      <div className="mt-6 lg:mt-8">
-        <button className="text-dark-charcoal text-base lg:text-lg px-8 lg:px-10 py-2.5 lg:py-3 rounded-full border-2 border-golden-orange-100 hover:bg-golden-orange hover:text-white transition-all duration-300">إنشاء مذكرة</button>
+      <div className="mt-6 lg:mt-8 flex gap-4">
+        <button className="text-dark-charcoal text-base lg:text-lg px-8 lg:px-10 py-2.5 lg:py-3 rounded-full border-2 border-yellow-orange bg-yellow-orange hover:bg-transparent hover:text-dark-charcoal transition-all duration-300">انشئ مذكرتك</button>
+        <Link to="/all-books" className="text-dark-charcoal text-base lg:text-lg px-8 lg:px-10 py-2.5 lg:py-3 rounded-full border-2 border-second bg-second hover:bg-transparent hover:text-dark-charcoal transition-all duration-300">تصفح المذكرات</Link>
       </div>
     </div>
     <div className="w-full lg:w-3/6 relative h-[300px] md:h-[400px] lg:h-auto mt-8 lg:mt-0">
