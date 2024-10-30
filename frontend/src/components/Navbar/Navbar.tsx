@@ -1,13 +1,13 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
   const links = [
-    { label: 'صمم مذكراتك', href: '#' },
-    { label: '🔥 عروض اليوم 🔥', href: '#' },
-    { label: 'تسجيل الدخول', href: '#' },
-    { label: 'إنشاء حساب', href: '#' },
+    { label: 'صمم مذكراتك', href: '/' },
+    { label: '🔥 عروض اليوم 🔥', href: '/day-offers' },
+    { label: 'تسجيل الدخول', href: '/login' },
+    { label: 'إنشاء حساب', href: '/signup' },
     { label: 'كل المذكرات', href: '#' },
     { label: 'المذكرات المفضلة', href: '#' },
     { label: 'سلة الشراء', href: '#' },
@@ -21,9 +21,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 mt-5">
           {/* Logo */}
           <div className="flex-shrink-0 ml-5">
-            <h1 className="text-xl sm:text-2xl font-extrabold text-[#5f000c] drop-shadow-[0_2px_8px_rgba(255,215,255,0.6)]">
+            <Link to={links[0].href} className="text-xl sm:text-2xl font-extrabold text-[#5f000c] drop-shadow-[0_2px_8px_rgba(255,215,255,0.6)]">
               {links[0].label}
-            </h1>
+            </Link>
           </div>
 
           {/* Search Bar - Hidden on mobile */}
@@ -42,18 +42,18 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-5">
-            <button className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium group relative overflow-hidden">
+            <Link to={links[1].href} className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium group relative overflow-hidden">
               <span className="inline-flex items-center animate-pulse">
               {links[1].label}
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-red-400 to-yellow-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            </button>
-            <button className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium">
+            </Link>
+            <Link to={links[2].href} className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium">
               {links[2].label}
-            </button>
-            <button className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg border-2 border-yellow-orange transition-colors readex-pro-medium">
+            </Link>
+            <Link to={links[3].href} className="px-3 py-1.5 text-xs bg-transparent hover:bg-golden-orange/10 rounded-lg border-2 border-yellow-orange transition-colors readex-pro-medium">
               {links[3].label}
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -99,25 +99,25 @@ const Navbar = () => {
         <div className="p-6 space-y-4">
           {/* Logo */}
           <div className="flex justify-center mb-6">
-          <h1 className="text-xl sm:text-2xl font-extrabold text-[#5f000c] drop-shadow-[0_2px_8px_rgba(255,215,255,0.6)]">
+          <Link to={links[0].href} className="text-xl sm:text-2xl font-extrabold text-[#5f000c] drop-shadow-[0_2px_8px_rgba(255,215,255,0.6)]">
               {links[0].label}
-            </h1>
+            </Link>
           </div>
 
           {/* Navigation Links */}
-          <button className="px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium group relative overflow-hidden cursor-pointer">
+          <Link to={links[1].href} className="px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium group relative overflow-hidden cursor-pointer block">
             <span className="inline-flex items-center animate-pulse relative z-10">
               {links[1].label}
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-red-500 to-yellow-300 opacity-0 group-hover:opacity-30 transition-all duration-500 animate-gradient-x"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
-          <button className="w-full px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium text-right">
+          </Link>
+          <Link to={links[2].href} className="w-full px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg transition-colors readex-pro-medium text-right block">
             {links[2].label}
-          </button>
-          <button className="w-full px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg border-2 border-yellow-orange transition-colors readex-pro-medium text-right">
+          </Link>
+          <Link to={links[3].href} className="w-full px-3 py-1.5 text-sm bg-transparent hover:bg-golden-orange/10 rounded-lg border-2 border-yellow-orange transition-colors readex-pro-medium text-right block">
             {links[3].label}
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

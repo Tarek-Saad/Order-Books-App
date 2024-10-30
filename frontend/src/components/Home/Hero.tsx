@@ -1,14 +1,13 @@
-import React from "react";
-
 const Hero = () => {
   const texts = [
     {type : "hook",text : "صمم مذكرتك بالشكل الى فى دماغك بالظبط"},
     {type : "description", text : "إنشاء مذكرات جذابة ومعقدة بأسهل طريقة ممكنة"},
   ]
 
-  return ( 
-  <div className="min-h-[75vh] flex flex-col lg:flex-row">
-    <div className="w-full lg:w-3/6 flex flex-col items-center lg:items-start justify-center px-4 lg:px-0 text-center lg:text-right py-8 lg:py-0">
+  return (  
+    <div className="flex flex-col lg:flex-row">
+      <div className="min-h-[75vh] flex flex-col lg:flex-row">
+        <div className="w-full lg:w-3/6 flex flex-col items-center lg:items-start justify-center px-4 lg:px-0 text-center lg:text-right py-8 lg:py-0">
       <h1 
         className="text-3xl md:text-4xl lg:text-6xl lg:leading-tight font-semibold bg-clip-text text-transparent bg-gradient-to-t from-yellow-orange to-second drop-shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
       >
@@ -23,7 +22,7 @@ const Hero = () => {
       <img
         src="https://i.ibb.co/VY2VPdx/girl.png"
         alt="Notebook illustration" 
-        className="w-full h-full mt-[-50px] object-cover lg:object-cover lg:mt-[0]  scale-100 lg:scale-125 relative z-10"
+        className="w-full h-full mt-[-50px] object-cover lg:object-cover lg:mt-[40px] lg:mr-[100px] scale-100 lg:scale-125 relative z-10"
       />
       {/* 
 
@@ -62,7 +61,8 @@ const Hero = () => {
 
     
     </div>
-  </div>
+      </div>
+    </div>
   );
 };
 
